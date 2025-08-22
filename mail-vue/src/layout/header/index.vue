@@ -254,13 +254,6 @@ function formatName(email) {
 </style>
 <style lang="scss" scoped>
 
-.breadcrumb-item {
-  font-weight: bold;
-  font-size: 14px;
-  color: var(--el-text-color-primary);
-  white-space: nowrap;
-}
-
 :deep(.el-popper.is-pure) {
   border-radius: 6px;
 }
@@ -397,6 +390,16 @@ function formatName(email) {
   display: inline-flex;
   align-items: center;
   height: 100%;
+  min-width: 0;
+}
+
+.breadcrumb-item {
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--el-text-color-primary);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .toolbar {
